@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Tareas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <h1>Gestión de Tareas</h1>
+    
+    <div class="container">
+        <h2>Agregar/Actualizar Tarea</h2>
+        <form id="taskForm">
+            <input type="hidden" id="taskId">
+            <div>
+                <label for="tituloTarea">Título:</label>
+                <input type="text" id="tituloTarea" placeholder="Ingrese el título" required>
+            </div>
+            <div>
+                <label for="descripcionTarea">Descripción:</label>
+                <textarea id="descripcionTarea" placeholder="Ingrese la descripción" required></textarea>
+            </div>
+            <div>
+                <label for="fechaEstimadaFinalizacion">Fecha estimada de finalización:</label>
+                <input type="date" id="fechaEstimadaFinalizacion" required>
+            </div>
+            <div>
+                <label for="fechaFinalizacion">Fecha de finalización:</label>
+                <input type="date" id="fechaFinalizacion">
+            </div>
+            <div>
+                <label for="responsableTarea">Responsable:</label>
+                <input type="text" id="responsableTarea" placeholder="Ingrese el responsable" required>
+            </div>
+            <div>
+                <label for="prioridadTarea">Prioridad:</label>
+                <select id="prioridadTarea">
+                    <option value="1">Alta</option>
+                    <option value="2">Media</option>
+                    <option value="3">Baja</option>
+                </select>
+            </div>
+            <div>
+                <label for="estadoTarea">Estado:</label>
+                <select id="estadoTarea">
+                    <option value="1">Pendiente</option>
+                    <option value="2">En proceso</option>
+                    <option value="3">Terminada</option>
+                    <option value="4">En impedimento</option>
+                </select>
+            </div>
+            <div>
+                <label for="observacionesTarea">Observaciones:</label>
+                <textarea id="observacionesTarea" placeholder="Ingrese observaciones adicionales"></textarea>
+            </div>
+            <div class="button-group">
+                <button type="submit">Guardar</button>
+                <button type="button" id="cancelButton">Cancelar</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="container">
+        <h2>Filtros</h2>
+        <form id="filterForm">
+            <div>
+                <label for="fechaInicio">Fecha inicio:</label>
+                <input type="date" id="fechaInicio">
+            </div>
+            <div>
+                <label for="fechaFin">Fecha fin:</label>
+                <input type="date" id="fechaFin">
+            </div>
+            <div>
+                <label for="prioridad">Prioridad:</label>
+                <select id="prioridad">
+                    <option value="">Todas</option>
+                    <option value="1">Alta</option>
+                    <option value="2">Media</option>
+                    <option value="3">Baja</option>
+                </select>
+            </div>
+            <div>
+                <label for="responsable">Responsable:</label>
+                <input type="text" id="responsable" placeholder="Ingrese el responsable">
+            </div>
+            <div>
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" placeholder="Ingrese el título">
+            </div>
+            <div>
+                <label for="descripcion">Descripción:</label>
+                <input type="text" id="descripcion" placeholder="Ingrese la descripción">
+            </div>
+            <button type="submit">Filtrar</button>
+        </form>
+    </div>
+    
+    <div class="container" id="tareas">
+        <h2>Listado de Tareas</h2>
+    </div>
+
+    <script src="/frontend/script.js"></script>
+    
+</body>
+</html>

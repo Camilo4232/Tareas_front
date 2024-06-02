@@ -1,0 +1,107 @@
+:root {
+    --main-bg-color: #f4f4f9;
+    --main-text-color: #333;
+    --container-bg-color: #fff;
+    --container-border-color: #ccc;
+    --button-bg-color: #35D7FF;
+    --button-hover-bg-color: #2bc6f2;
+    --button-text-color: #fff;
+    --impediment-bg-color: #fff3cd;
+    --impediment-border-color: #ffc107;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+
+body {
+    font-family: 'Patua One', serif;
+    background-color: var(--main-bg-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    color: var(--button-bg-color);
+    margin-top: 20px;
+}
+
+.container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid var(--container-border-color);
+    border-radius: 8px;
+    background-color: var(--container-bg-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+}
+
+h2 {
+    text-align: center;
+    color: var(--button-bg-color);
+}
+
+.form div {
+    margin-bottom: 10px;
+}
+
+.label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--main-text-color);
+}
+
+input, textarea, select, button {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid var(--container-border-color);
+    border-radius: 4px;
+}
+
+.button {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: var(--button-hover-bg-color);
+}
+
+.button[type="button"] {
+    background-color: #dc3545;
+}
+
+.button[type="button"]:hover {
+    background-color: #c82333;
+}
+
+.tarea {
+    border: 1px solid var(--container-border-color);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: var(--main-bg-color);
+}
+
+.tarea.en-impedimento {
+    border-color: var(--impediment-border-color);
+    background-color: var(--impediment-bg-color);
+}
+
+.tarea .titulo {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
