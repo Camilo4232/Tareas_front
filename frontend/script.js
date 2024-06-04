@@ -12,8 +12,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const observacionesTareaInput = document.getElementById('observacionesTarea');
     const cancelButton = document.getElementById('cancelButton');
 
-    function fetchTareas(filters = {}) {
-        let url = new URL('http://127.0.0.1:8000/api/tareas');
+    async function fetchTareas(filters = {}) {
+        const url = new URL('http://localhost/tareas');
         Object.keys(filters).forEach(key => url.searchParams.append(key, filters[key]));
 
         fetch(url)
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const data = { titulo, descripcion, fechaEstimadaFinalizacion, responsable, prioridad, estado, observaciones };
 
         const method = id ? 'PUT' : 'POST';
-        const url = id ? `http://127.0.0.1:8000/api/tareas/${id}` : 'http://127.0.0.1:8000/api/tareas';
+        const url = id ? `http://localhost:8000/tareas/${id}` : 'http://localhost:8000/tareas';
 
         fetch(url, {
             method: method,
@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     window.editTarea = function(id) {
-        fetch(`http://127.0.0.1:8000/api/tareas/${id}`)
+        fetch(`http://localhost:8000/tareas/${id}`)
             .then(response => response.json())
             .then(tarea => {
                 taskIdInput.value = tarea.id;
@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     window.deleteTarea = function(id) {
-        fetch(`http://127.0.0.1:8000/api/tareas/${id}`, {
+        fetch(`http://localhost:8000/tareas/${id}`, {
             method: 'DELETE'
         })
         .then(() => fetchTareas())

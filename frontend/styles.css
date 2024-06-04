@@ -1,20 +1,19 @@
 :root {
-    --main-bg-color: #f4f4f9;
-    --main-text-color: #333;
-    --container-bg-color: #fff;
-    --container-border-color: #ccc;
-    --button-bg-color: #35D7FF;
-    --button-hover-bg-color: #2bc6f2;
-    --button-text-color: #fff;
-    --impediment-bg-color: #fff3cd;
-    --impediment-border-color: #ffc107;
+
+    backdrop-filter: blur(10px); 
+    --main-text-color: #969292;
+    --button-bg-color: #000000;
+    --button-hover-bg-color: #000000;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
 
+
 body {
+    background-image: url('img5.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: 'Patua One', serif;
-    background-color: var(--main-bg-color);
     margin: 0;
     padding: 0;
     display: flex;
@@ -24,7 +23,7 @@ body {
 
 h1 {
     text-align: center;
-    color: var(--button-bg-color);
+    color:#000000;
     margin-top: 20px;
 }
 
@@ -37,6 +36,7 @@ h1 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 80%;
     max-width: 600px;
+    backdrop-filter: blur(150px); 
 }
 
 h2 {
@@ -60,7 +60,9 @@ input, textarea, select, button {
     padding: 10px;
     box-sizing: border-box;
     border: 1px solid var(--container-border-color);
+    backdrop-filter: blur(150px); 
     border-radius: 4px;
+    background-color: transparent;
 }
 
 .button {
@@ -75,13 +77,15 @@ input, textarea, select, button {
     background-color: var(--button-hover-bg-color);
 }
 
-.button[type="button"] {
-    background-color: #dc3545;
+#cancelButton:hover {
+    background-color: rgb(101, 203, 243); 
 }
 
-.button[type="button"]:hover {
-    background-color: #c82333;
+
+#guardarButton:hover {
+    background-color: rgb(101, 203, 243); 
 }
+
 
 .tarea {
     border: 1px solid var(--container-border-color);
